@@ -1,0 +1,37 @@
+.u-w-xs-100 {
+    @media (max-width: 768px) {
+        width: 100% !important;
+    }
+}
+.u-w-md-100 {
+    @media (max-width: 1440px) {
+        width: 100% !important;
+    }
+}
+.u-w-sm-100 {
+    @media (max-width: 1024px) {
+        width: 100% !important;
+    }
+}
+.u-w-lg-100 {
+    @media (min-width: 1680px) {
+        width: 100% !important;
+    }
+}
+@each $value in top, left, bottom, right {
+    @for $i from 1 to 9 {
+        .u-m-#{$i} {
+            margin: 10px * $i !important;
+        }
+        .u-m-#{$value}-#{$i} {
+            margin-#{$value}: 10px * $i !important;
+        }
+        .u-p-#{$i} {
+            padding: 10px * $i !important;
+        }
+        .u-p-#{$value}-#{$i} {
+            padding-#{$value}: 10px * $i !important;
+        }
+        
+    }
+}

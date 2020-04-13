@@ -1,0 +1,12 @@
+$regularMaskDimension: 150px;
+.u-mask {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    & > * { text-align: center; }
+}
+
+.u-mask--round {
+    border-radius: 50%;
+}

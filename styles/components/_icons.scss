@@ -1,0 +1,32 @@
+$dimension: 1rem;
+.c-icon {
+	display: inline-block;
+	height: $dimension; width: $dimension;
+	color: var(--white);
+
+}
+
+.c-icon--email {
+	background: url(assets/images/logos/email.svg) top left no-repeat;
+	filter: invert(100%);
+}
+.c-icon--phone {
+	background: url(assets/images/logos/phone.svg) top left no-repeat;
+	filter: invert(100%);
+}
+.c-icon--github {
+	background: url(assets/images/logos/github.svg) top left no-repeat;
+	filter: invert(100%);
+}
+
+.c-icon--next {
+	background: url(assets/images/logos/next.svg) top left no-repeat;
+	filter: invert(100%);
+}
+.c-icon--design {
+	$dimension: $dimension * 2;
+	height: $dimension; width: $dimension;
+	background: url(assets/images/logos/design.svg) center center no-repeat;
+	background-size: 100%;
+	filter: invert(100%);
+}

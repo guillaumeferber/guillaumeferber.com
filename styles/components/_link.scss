@@ -1,0 +1,86 @@
+a.c-link,
+.c-link {
+    position: relative;
+    display: inline;
+    text-align: left;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'bebas_neuebold', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    overflow: hidden;
+    z-index: 10;
+    transition: all .15s ease-in $animation-delay;
+    .c-navigation & {
+        font-family: 'yantramanav_regular', sans-serif;
+        font-weight: 400;
+
+    }
+}
+
+a.c-link,
+.c-link {
+    &.c-link--underlined {
+        // underline initial rules
+        &:after {
+            display: block;
+            position: absolute;
+            content: '';
+            bottom: 0px; left: 0; top: auto;
+            height: 4px;
+            width: 0;
+            max-width: 100%;
+            background: var(--white);
+            opacity: 0;
+            visibility: hidden;
+            z-index: -1;
+            transition: width .3s $animation-style $animation-delay;
+        }
+        /*
+        * Case of the underline
+        * * when the link is active + hover state: display underline
+        */
+        &.active,
+        &:hover {
+            transition: all .15s $animation-style $animation-delay;
+            background: none;
+        }
+        &.active:after,
+        &:hover:after {
+            width: 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+a.c-link,
+.c-link {
+    &.c-link--plus {
+        // "+" icon initial rules
+        &:before {
+            position: absolute;
+            display: inline-block;
+            content: '\002B';
+            color: var(--dark);
+            top: calc(50% - 20px); right: -30px;
+            transform-origin: center;
+            transition: all .3s $animation-style $animation-delay;
+            transform: rotate(0);
+        }
+        /*
+            * Case of the "+" icon
+            * * when the link is active:
+            * * initial rules + hover state
+            */
+            &.active:before {
+                transform: rotate(45deg);
+                &:hover {
+                    transform: rotate(0);
+                }
+            }
+            // when the link is NOT active: hover state
+            &:not(.active):hover:before { transform: rotate(90deg); }
+    }
+}

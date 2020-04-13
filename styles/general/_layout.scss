@@ -1,0 +1,21 @@
+html { scroll-behavior: smooth; }
+body {
+    width: 100%;
+    background-color: var(--black);
+}
+main {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-left: 20vw;
+    aside {
+        position: fixed;
+        width: 20vw;
+        height: 100vh;
+        left: 0;
+        background-color: lighten(#101010, 8%);
+    }
+
+    & > .content {
+        width: 100%;
+    }
+}

@@ -1,0 +1,18 @@
+.c-article {
+	margin-top: 4rem;
+	p,
+	h4 {
+		color: var(--light-gray);
+		margin-bottom: 2rem;
+	}
+}
+
+.c-article__title {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	span {
+		color: var(--accent);
+	}
+}

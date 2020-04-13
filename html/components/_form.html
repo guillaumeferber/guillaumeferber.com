@@ -1,0 +1,33 @@
+<div class="c-form-container" id="candidate">
+    <div class="c-form">
+        <form action="contact_form.php" enctype="multipart/form-data">
+            <input type="hidden" name="candidate_expertise" value="">
+            <div class="c-form__body">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12"><input type="text" placeholder="*Nom" required></div>
+                    <div class="col-md-6 col-xs-12"><input type="text" placeholder="*Prénom" required></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12"><input type="email" placeholder="*Courriel" required></div>
+                    <div class="col-md-6 col-xs-12"><input type="tel" placeholder="*Téléphone" required></div>
+                </div>
+                <select class="js-select">
+                    <option value="">What do you want to do?</option>
+                    <option value="onepage">One page website</option>
+                    <option value="ecommerce">e-commerce</option>
+                    <option value="cms">Custom CMS</option>
+                </select>
+                <div class="d-flex c-form__row">
+                    <div class="w-75 w-xs-100">
+                        <textarea name="comment" cols="30" rows="1" placeholder="Commentaire"></textarea>
+                    </div>
+                    <div class="w-25 w-xs-100">
+                        <button type="submit" class="w-100 c-button c-button--reverse text-uppercase">
+                            <span class="c-button__body h2">Postulez</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

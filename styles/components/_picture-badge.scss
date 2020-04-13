@@ -1,0 +1,28 @@
+.c-picture-badge {
+	position: relative;
+	height: 170px; width: 170px;
+	margin: 0 auto;
+	padding: .5rem;
+	a {
+		display: block;
+		height: 100%;
+		width: 100%;
+		&:after {
+			display: block;
+			position: absolute;
+			content: '';
+			top: 0; left: 0;
+			height: 100%; width: 100%;
+			border: 8px solid var(--accent);
+			background-color: transparent;
+			border-radius: 50%;
+			z-index: 2;
+			overflow: hidden;
+		}
+	}
+	img {
+		max-width: 100%;
+		border-radius: 50%;
+		height: 100%;
+	}
+}

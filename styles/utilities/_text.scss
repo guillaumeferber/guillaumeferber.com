@@ -1,0 +1,13 @@
+.hyphenate {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+.text-green {
+    color: var(--green);
+}
+.text-accent {
+    color: var(--accent);
+}
+.text-white {
+    color: darken(#fff, 10%) !important;
+}

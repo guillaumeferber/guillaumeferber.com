@@ -1,0 +1,76 @@
+// title fonts
+@font-face {
+    font-family: 'yantramanav_regular';
+    src: url('./assets/fonts/yantramanav-regular-webfont.woff2') format('woff2'),
+         url('./assets/fonts/yantramanav-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yantramanavlight';
+    src: url('./assets/fonts/yantramanav-light-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// paragraph fonts
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('./assets/fonts/bebasneueregular-webfont.woff2') format('woff2'),
+         url('./assets/fonts/bebasneueregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bebas_neuebold';
+    src: url('./assets/fonts/bebasneuebold-webfont.woff2') format('woff2'),
+         url('./assets/fonts/bebasneuebold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+h1 { font-size: 90px; }
+h2 { font-size: 60px; }
+h3 { font-size: 40px; }
+h4 { font-size: 30px; }
+h5 { font-size: 18px; }
+h3.highlight { font-size: 125px; }
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+    display: block;
+    font-family: 'bebas_neuebold', sans-serif;
+    font-weight: 700;
+    color: var(--white);
+    &.paragraph {
+        font-family: 'yantramanavlight', sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 1.6;
+        margin-bottom: 35px;
+    }
+}
+
+h5, .h5 {
+    font-family: 'bebas_neueregular', sans-serif;
+    font-weight: 400;
+    &.paragraph {
+        font-family: 'yantramanavlight', sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 1.6;
+        margin-bottom: 35px;
+    }
+}
+
+
+p {
+    font-family: 'yantramanavlight', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}

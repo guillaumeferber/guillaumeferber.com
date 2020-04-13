@@ -1,0 +1,1 @@
+MainModule.init(configuration);

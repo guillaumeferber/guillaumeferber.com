@@ -1,0 +1,15 @@
+$headerHeight: 230px;
+// structure
+$sidebarWidth: 12%;
+$mainContainerWidth: calc(100% - #{$sidebarWidth});
+
+// margin
+$marginRegular: 80px;
+
+// colors & brackground
+$gradient: var(--blue) linear-gradient(to right, var(--turquoise) 10%, var(--blue));
+
+// animations
+$animation-duration: .15s;
+$animation-style: ease-out;
+$animation-delay: 0s;
