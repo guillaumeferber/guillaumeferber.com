@@ -37,6 +37,7 @@
     "gulp-zip": "^5.0.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "@guillaumeferber/html-selector": "^1.1.6"
   }
 }

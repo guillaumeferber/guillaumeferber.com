@@ -1,0 +1,50 @@
+
+:root {
+	--neon-text-color: #f40;
+  	--neon-border-color: #08f;
+}
+/* Animate neon flicker */
+
+.u-flicker {
+	color: #fff;
+	animation: flicker 1.5s infinite alternate;
+	padding: .2rem 1.5rem;
+  	border: .2rem solid #fff;
+    border-radius: .2rem;
+    margin: 0 1rem;
+  	text-transform: uppercase;
+	&::selection {
+		background-color: var(--red);
+		color: var(--accent);
+	}
+	&:focus {
+		outline: none;
+	}
+}
+@keyframes flicker {
+
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+
+        text-shadow:
+            -0.2rem -0.2rem .7rem #fff,
+            0.2rem 0.2rem .7rem #fff,
+            0 0 2rem var(--accent),
+            0 0 4rem var(--accent),
+            0 0 6rem var(--accent),
+            0 0 8rem var(--accent),
+            0 0 10rem var(--accent);
+
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 .75rem var(--red),
+            inset 0 0 .75rem var(--red),
+            0 0 1.2rem var(--red),
+            inset 0 0 1.2rem var(--red);
+    }
+
+    20%, 24%, 55% {
+        text-shadow: none;
+        box-shadow: none;
+    }
+}

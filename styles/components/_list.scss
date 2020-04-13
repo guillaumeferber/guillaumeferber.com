@@ -14,132 +14,66 @@
 
 
 .c-list {
-    overflow-x: hidden;
-    &.c-list--icons {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        align-items: stretch;
-        & > .c-list__item {
-            text-align: center;
-            padding: 0 25px;
-            margin: 0 0 80px 40px;
-        }
-    }
-    &.c-list--3-cols {
-        & > .c-list__item {
-            width: 33%;
-            margin-left: 0;
+    &.c-list--check {
+        $initial-left-position: 30px;
+        $initial-width: 11px;
+        $initial-height: 5px;
+        list-style-type: none;
+        margin: 0;
+        li {
+            position: relative;
+            &:before,
+            &:after {
+                position: absolute;
+                display: inline-block;
+                content: '';
+                height: $initial-height;
+                width: $initial-width;
+                background-color: var(--green);
+            }
+            &:before {
+                top: 50%;
+                left: -$initial-left-position;
+                transform: rotate(45deg);
+            }
+            &:after {
+                left: -$initial-left-position + 3px;
+                top: calc(50% - 4px);
+                width: $initial-width * 2;
+                transform: rotate(-45deg);
+            }
         }
     }
 }
 
-.c-list.c-list--carousel {
+.c-list.c-list--dev-icons {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    max-width: 100%;
     li {
-        display: inline-block;
-        & + li { padding-left: $marginRegular; }
-        &[style] {
-            transition: all .25s linear $animation-delay;
+        font-size: 3rem;
+        transition: all .6s ease-out 0s;
+        transform: scale(1);
+        &:hover {
+            transform: scale(1.1);
+            text-shadow:
+            -0.2rem -0.2rem .7rem var(--white),
+            0.2rem 0.2rem .7rem var(--white),
+            0 0 1rem var(--green),
+            0 0 2rem var(--green),
+            0 0 3rem var(--green),
+            0 0 4rem var(--green),
+            0 0 5rem var(--green);
+            transition: all .15s ease-in 0s;
         }
     }
-    @media (max-width: 768px) {
-        flex-direction: column;
-    }
-}
-
-.c-list__item {
-    display: flex;
-    flex-direction: column;
-    .highlight {
-        padding-top: calc(#{$marginRegular} - .5rem);
-        padding-left: 0;
-        padding-right: 0;
-        margin: 0; // removes the initial margin for paragraphs
-    }
-}
-.c-list__item--footer {
-    max-width: 75%;
-    padding-top: calc(#{$marginRegular} - .5rem);
-    margin: 0 auto;
-}
-
-.c-list__item-title {
-    text-transform: uppercase;
-}
-
-.c-list__item--image {
-    max-width: 150px;
-    text-align: center;
-    margin: 65px auto 0;
-    flex-grow: 1;
-    img {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-.c-list--information {
-    width: 100%;
-    list-style-type: none;
-    margin-top: $marginRegular;
-    li {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        min-height: $marginRegular;
-        & + li {
-            margin-top: 30px;
-        }
-        & > * {
-            display: inline-block;
-            &:first-child {
-                min-width: 265px;
-                height: $marginRegular;
-                text-indent: 28px;
-                font-size: 1.4rem;
-                background-color: var(--light);
-                color: var(--primary);
-                margin: 0;
-                line-height: $marginRegular;
-                vertical-align: middle;
-            }
-            &:last-child {
-                width: $marginRegular;
-                height: $marginRegular;
-                background-color: var(--primary);
-                min-width: $marginRegular;
-                img {
-                    text-align: center;
-                    transform: translateY(calc(50% + (34px/4)));
-                    height: 34px;
-                    width: 100%;
-                }
-            }
-        }
-    }
-
 }
 @media (max-width: 1024px) {
-    .c-list.c-list--icons,
-    .c-list.c-list--icons.c-list--3-cols {
-        & > * {
-            width: 44%;
-            margin: 0 0 80px 0;
-        }
-    }
-}
-@media (max-width: 768px) {
-    .c-list.c-list--icons,
-    .c-list.c-list--icons.c-list--3-cols {
-        & > * {
-            width: 100%;
-            margin: 0 0 80px 0;
+    .c-list.c-list--dev-icons {
+        justify-content: flex-start;
+        li {
+            margin-right: 1rem;
         }
     }
 }

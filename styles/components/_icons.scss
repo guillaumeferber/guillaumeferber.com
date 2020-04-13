@@ -24,9 +24,17 @@ $dimension: 1rem;
 	filter: invert(100%);
 }
 .c-icon--design {
-	$dimension: $dimension * 2;
+	$dimension: $dimension * 4;
 	height: $dimension; width: $dimension;
-	background: url(assets/images/logos/design.svg) center center no-repeat;
-	background-size: 100%;
+	background: center / 100% no-repeat url(assets/images/logos/design.svg);
 	filter: invert(100%);
+}
+.c-icon--cms {
+	$dimension: $dimension * 4;
+	height: $dimension; width: $dimension;
+	background: center / 100% no-repeat url(assets/images/logos/cms.svg);
+	filter: invert(100%);
+}
+.c-icon--code {
+	font-size: 3rem;
 }
