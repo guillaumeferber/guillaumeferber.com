@@ -11,6 +11,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
-        ftp-server: ftp://box24.domaineinternet.ca/
+        ftp-server: box24.domaineinternet.ca/
         ftp-username: guillau5
         ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: dist/
