@@ -1,5 +1,5 @@
 # Guillaume FERBER.COM #
-
+![Deploy](https://github.com/guillaumeferber/guillaumeferber.com/workflows/Publish%20Website/badge.svg?event=release)
 Documentation for the web project
 
 ## Summary ##
