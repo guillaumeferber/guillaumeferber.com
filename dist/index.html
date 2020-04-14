@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
     <link rel="stylesheet" href="style.min.css">
     <title>Guillaume Ferber | Web developer in Montreal</title>
     <meta name="description" content="Web and front-end development in Montreal focusing on good design, web standards, user-experience and SEO.">
@@ -36,11 +34,11 @@
 			<img src="assets/images/logos/logo.png" alt="Guillaume Ferber - Web Developer">
 		</a>
 	</div>
-	<input class="menu-btn" type="checkbox" id="menu-btn" />
+	<input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
 	<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 	<ul class="c-navigation c-navigation--column list-unstyled">
 		<li><a href="#about"><span>About</span></a></li>
-		<li><a href="#portfolio"><span>Portfolio</span></a></li>
+		<li><a href="#technologies"><span>Technologies</span></a></li>
 		<li><a href="#contact"><span>Contact</span></a></li>
 	</ul>
 
@@ -74,9 +72,7 @@
 		</ul>
 	</div>
 	<div class="c-hero__icon">
-		<a href="#about">
-			<span class="c-icon c-icon--next"></span>
-		</a>
+		<span aria-hidden="false" class="u-hidden">Check out</span> <a href="#about"><span aria-hidden="false" class="u-hidden">how I can help you in your web project.</span><span class="c-icon c-icon--next" aria-hidden="true"></span></a>
 	</div>
 </div>
 
@@ -103,59 +99,6 @@
 			<p>Integration of your custom design into a content management system gives you the freedom to easily update and manage the site on your own.</p>
 		</div>
 	</div>
-	<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-		<div class="w-100">
-			<h2 class="mb-5">Skills</h2>
-
-			<h4 class="mb-3">Programming Languages &amp; Tools</h4>
-			<ul class="list-inline c-list c-list--dev-icons">
-			<li class="list-inline-item" title="HTML5">
-				<i class="fab fa-html5"></i>
-			</li>
-			<li class="list-inline-item" title="CSS3">
-				<i class="fab fa-css3-alt"></i>
-			</li>
-			<li class="list-inline-item" title="JavaScript">
-				<i class="fab fa-js-square"></i>
-			</li>
-			<li class="list-inline-item" title="Angular">
-				<i class="fab fa-angular"></i>
-			</li>
-			<li class="list-inline-item" title="ReactJS">
-				<i class="fab fa-react"></i>
-			</li>
-			<li class="list-inline-item" title="node.js">
-				<i class="fab fa-node-js"></i>
-			</li>
-			<li class="list-inline-item" title="Sass">
-				<i class="fab fa-sass"></i>
-			</li>
-			<li class="list-inline-item" title="LESS">
-				<i class="fab fa-less"></i>
-			</li>
-			<li class="list-inline-item" title="Wordpress">
-				<i class="fab fa-wordpress"></i>
-			</li>
-			<li class="list-inline-item" title="Gulp">
-				<i class="fab fa-gulp"></i>
-			</li>
-			<li class="list-inline-item" title="Grunt">
-				<i class="fab fa-grunt"></i>
-			</li>
-			<li class="list-inline-item" title="npm">
-				<i class="fab fa-npm"></i>
-			</li>
-			</ul>
-
-			<h4 class="mb-3">Workflow</h4>
-			<ul class="mb-0 c-list c-list--check">
-				<li>Mobile-First, Responsive Design</li>
-				<li>Cross Browser Testing &amp; Debugging</li>
-				<li>Cross Functional Teams</li>
-				<li>Agile Development &amp; Scrum</li>
-			</ul>
-		</div>
-		</section>
 </div>
 
 <!-- end _intro.html-->
@@ -190,60 +133,74 @@ Over the years, my network of partners has grown to include some incredible back
 
 Every project is different so I don't have a set range or price list, but if you contact me with a description of your site I'll get back to you with a personalized quote.</p>
 
-<h3 class="mt-5">Contact Me</h3>
-<p>If you have a project in mind you think I'd be a good fit for, the best thing to do is shoot me an email to <a href="mailto:ferber.g@gmail.com" class="text-accent">ferber.g@gmail.com</a> and tell me a little bit about your project. Then we can take things from there.</p>
-<h3 class="mt-5">Thanks</h3>
-</div>
-
 <!-- end _about.html-->
             </section>
 
             <section class="c-section c-section--primary">
-<!-- start _works.html-->
-<h2 id="portfolio">My Portfolio</h2>
+<!-- start _technologies.html-->
+<section class="resume-section p-lg-5 d-flex align-items-center text-white" >
+	<div class="w-100" id="technologies">
+		<h2 class="mb-5 mt-5">Technologies</h2>
 
-<!-- end _works.html-->
+		<h4 class="mb-3">Programming Languages &amp; Tools</h4>
+		<ul class="list-inline c-list c-list--dev-icons">
+		<li class="list-inline-item" title="HTML5">
+			<i class="fab fa-html5"></i>
+		</li>
+		<li class="list-inline-item" title="CSS3">
+			<i class="fab fa-css3-alt"></i>
+		</li>
+		<li class="list-inline-item" title="JavaScript">
+			<i class="fab fa-js-square"></i>
+		</li>
+		<li class="list-inline-item" title="Angular">
+			<i class="fab fa-angular"></i>
+		</li>
+		<li class="list-inline-item" title="ReactJS">
+			<i class="fab fa-react"></i>
+		</li>
+		<li class="list-inline-item" title="node.js">
+			<i class="fab fa-node-js"></i>
+		</li>
+		<li class="list-inline-item" title="Sass">
+			<i class="fab fa-sass"></i>
+		</li>
+		<li class="list-inline-item" title="LESS">
+			<i class="fab fa-less"></i>
+		</li>
+		<li class="list-inline-item" title="Wordpress">
+			<i class="fab fa-wordpress"></i>
+		</li>
+		<li class="list-inline-item" title="Gulp">
+			<i class="fab fa-gulp"></i>
+		</li>
+		<li class="list-inline-item" title="Grunt">
+			<i class="fab fa-grunt"></i>
+		</li>
+		<li class="list-inline-item" title="npm">
+			<i class="fab fa-npm"></i>
+		</li>
+		</ul>
+
+		<h4 class="mb-3 mt-5">Workflow</h4>
+		<ul class="mb-0 c-list c-list--check">
+			<li>Mobile-First, Responsive Design</li>
+			<li>Cross Browser Testing &amp; Debugging</li>
+			<li>Cross Functional Teams</li>
+			<li>Agile Development &amp; Scrum</li>
+		</ul>
+	</div>
+</section>
+
+<!-- end _technologies.html-->
             </section>
 
             <section class="c-section c-section--primary">
 <!-- start _contact.html-->
-<h2 id="contact">Let's get in touch!</h2>
-<!-- start _form.html-->
-<div class="c-form-container" id="candidate">
-    <div class="c-form">
-        <form action="contact_form.php" enctype="multipart/form-data">
-            <input type="hidden" name="candidate_expertise" value="">
-            <div class="c-form__body">
-                <div class="row">
-                    <div class="col-md-6 col-xs-12"><input type="text" placeholder="*Nom" required></div>
-                    <div class="col-md-6 col-xs-12"><input type="text" placeholder="*Prénom" required></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-xs-12"><input type="email" placeholder="*Courriel" required></div>
-                    <div class="col-md-6 col-xs-12"><input type="tel" placeholder="*Téléphone" required></div>
-                </div>
-                <select class="js-select">
-                    <option value="">What do you want to do?</option>
-                    <option value="onepage">One page website</option>
-                    <option value="ecommerce">e-commerce</option>
-                    <option value="cms">Custom CMS</option>
-                </select>
-                <div class="d-flex c-form__row">
-                    <div class="w-75 w-xs-100">
-                        <textarea name="comment" cols="30" rows="1" placeholder="Commentaire"></textarea>
-                    </div>
-                    <div class="w-25 w-xs-100">
-                        <button type="submit" class="w-100 c-button c-button--reverse text-uppercase">
-                            <span class="c-button__body h2">Postulez</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
+<h2 id="contact" class="mb-5">Let's get in touch!</h2>
+<p class="text-white">If you have a project in mind you think I'd be a good fit for, the best thing to do is shoot me an email to <a href="mailto:ferber.g@gmail.com" class="text-accent">ferber.g@gmail.com</a> and tell me a little bit about your project. Then we can take things from there.</p>
+<h3 class="mt-5">Thanks</h3>
 </div>
-
-<!-- end _form.html-->
 
 <!-- end _contact.html-->
             </section>

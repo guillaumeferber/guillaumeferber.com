@@ -4,7 +4,8 @@ const connect = require('gulp-connect');
 const open = require('gulp-open');
 // CSS-Sass
 const sass = require('gulp-sass');
-const minifyCSS = require('gulp-csso');
+const nano = require('gulp-cssnano');
+const uncss = require('gulp-uncss');
 // JS
 const concat = require('gulp-concat');
 const zip = require('gulp-zip');
@@ -101,9 +102,18 @@ const css = () => {
   return src(configuration.assets.css)
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(concat('style.min' + configuration.extension.css))
-    .pipe(minifyCSS())
+    .pipe(nano())
     .pipe(dest(configuration.folders.dest))
     .pipe(connect.reload());
+}
+
+const unCss = () => {
+  return src(configuration.folders.dest + 'style.min' + configuration.extension.css)
+  .pipe(uncss({
+    html: [configuration.folders.dest + '/**/*.html']
+  }))
+  .pipe(nano())
+  .pipe(dest(configuration.folders.dest))
 }
 
 const js = () => {
@@ -128,6 +138,6 @@ const zippify = () => {
 
 exports.html = series(html.prettify, html.extend, html.htmlClean);
 
-exports.default = series(parallel(css, js, this.html), copyFolder);
+exports.default = series(parallel(css, js, this.html), unCss, copyFolder);
 exports.watch = series(this.default, parallel(connectServer, watchAssets, openServer));
-exports.build = series(parallel(css, js), this.html, zippify);
+exports.build = series(parallel(css, js), this.html, unCss, copyFolder, zippify);
