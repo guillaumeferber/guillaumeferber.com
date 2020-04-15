@@ -16,5 +16,8 @@ var configuration = {
             input: 'candidate_expertise'
         },
         targetAttr: 'routerLink'
+    },
+    navigation: {
+        elem: '.js-nav'
     }
 };

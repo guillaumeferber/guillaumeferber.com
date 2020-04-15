@@ -2,14 +2,26 @@ html { scroll-behavior: smooth; }
 body {
     width: 100%;
     background-color: var(--black);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
 }
 main {
     display: flex;
     flex-flow: row nowrap;
-    padding-left: 20vw;
+    padding-left: 0;
+    body.open & {
+        transition: width .15s ease-out 0s;
+        padding-left: 20vw;
+    }
     aside {
         position: fixed;
-        width: 20vw;
+        width: 0;
+        transition: width .15s ease-out 0s;
+        z-index: 1;
+        body.open & {
+            width: 20vw;
+        }
         height: 100vh;
         left: 0;
         background-color: lighten(#101010, 8%);
@@ -17,5 +29,30 @@ main {
 
     & > .content {
         width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    main {
+        body.open & {
+            padding-left: 24vw;
+        }
+    }
+    main aside {
+        width: 0;
+        body.open & {
+            width: 24vw;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+        padding-left: 0;
+    }
+    main aside {
+        width: 0;
+        visibility: hidden;
+        opacity: 0;
     }
 }

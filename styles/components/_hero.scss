@@ -2,11 +2,15 @@
     position: fixed;
     padding: 0 0 5%;
     height: 100vh;
-    width: 80vw;
-    left: 20vw; top: 0;
-    z-index: 1;
+    width: 100vw;
+    left: 0; top: 0;
+    z-index: 0;
     background-color: var(--black);
     background-blend-mode: multiply;
+    body.open & {
+        width: 80vw;
+        left: 20vw;
+    }
     &.c-hero--light {
         background-color: lighten($color: #151515, $amount: 2%);
     }
@@ -88,9 +92,27 @@
 }
 
 @media (max-width: 768px) {
+    .c-hero {
+        left: 0;
+        body.open & {
+            left: 24vw;
+        }
+
+    }
     .c-hero__title-group {
         width: 100%;
         max-width: 80%;
         left: $marginRegular / 2;
     }
+    .c-hero__alert {
+        bottom: 8rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .c-hero {
+        width: 100vw;
+        left: 0;
+    }
+    .c-hero__alert { display: none;}
 }

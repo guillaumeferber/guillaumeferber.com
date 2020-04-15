@@ -3,7 +3,6 @@ section.c-section,
     position: relative;
     padding: 190px 9.79vw;
     border-bottom: 1px solid lighten($color: #151515, $amount: 10%);
-    z-index: 100;
     &.c-section--primary {
         background-color: var(--black);
     }

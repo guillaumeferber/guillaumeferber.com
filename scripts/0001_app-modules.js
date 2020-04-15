@@ -113,12 +113,47 @@ var RouterLinkModule = (function(doc) {
     }
 })(window.document);
 
+var NavigationModule = (function(doc) {
+    function init(conf) {
+        // methods
+        _addEventListeners(conf);
+    }
+
+    function _addEventListeners (config) {
+        var selector = doc.querySelector(config.elem);
+        if (!selector) {
+            return;
+        }
+        var body = doc.querySelector('body');
+        window.onload = function(e) {
+            if (body.clientWidth < 768) {
+                body.classList.contains('open') ? body.classList.remove('open') : null;
+            }
+        }
+        window.addEventListener('resize', function(e) {
+            body.clientWidth < 768 ? body.classList.remove('open') : !body.classList.contains('open') ? body.classList.add('open') : null;
+        })
+
+        selector.addEventListener('click', function(event) {
+            var state = event.target.checked;
+            state ? body.classList.add('open') : body.classList.remove('open');
+        });
+    }
+
+    return {
+        init: init
+    }
+
+
+
+})(window.document)
 // Main module
-var MainModule = (function(ElementSetModule, RouterLinkModule) {
+var MainModule = (function(ElementSetModule, RouterLinkModule, NavigationModule) {
     return {
         init: function(configuration) {
             ElementSetModule.init(configuration.tabSet);
             RouterLinkModule.init(configuration.routerLink);
+            NavigationModule.init(configuration.navigation);
         }
     }
-})(ElementSetModule, RouterLinkModule);
+})(ElementSetModule, RouterLinkModule, NavigationModule);

@@ -33,3 +33,10 @@
 		content: '\2192';
 	}
 }
+
+@media (max-width: 767px) {
+	.c-snackbar {
+		width: 260px;
+		left: calc(50% - 260px / 2);
+	}
+}
