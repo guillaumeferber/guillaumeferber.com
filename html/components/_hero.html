@@ -1,22 +1,24 @@
 <div class="c-hero c-hero--light">
+	<div class="c-snackbar u-danger">I'm currently <b class="text-uppercase">not</b> <span class="">available</span>
+		<a class="c-snackbar__cta" href="#contact">Contact me !</a>
+	</div>
 	<div class="c-hero__parallax" ></div>
 	<div class="c-hero__title-group">
-		<hgroup>
-			<h1>HI! I'm <span class="text-accent">Guillaume</span></h1>
-			<h2 class="hyphenate paragraph">I'm a web developer in Montreal</h2>
-			<h3>I'm current <span class="u-flicker">not</span> <span class="">available</span></h3>
+		<hgroup itemscope itemtype="http://schema.org/Person">
+			<h1 itemprop="name">HI! I'm <span itemprop="givenName" class="text-accent" >Guillaume</span><span class="u-hidden" aria-hidden="true" itemprop="familyName">FERBER</span></h1>
+			<h2 class="hyphenate paragraph">I'm a <span itemprop="jobTitle">web developer</span> in <span itemprop="workLocation">Montreal</span></h2>
 		</hgroup>
 		<div class="w-75 mt-5">
 			<div class="c-button text-uppercase">
-				<a class="c-button__body h2" href="#contact">Start a projet</a>
+				<a class="c-button__body h2" href="#contact">Start a project</a>
 			</div>
 		</div>
 	</div>
 	<div class="c-hero__alert">
-		<ul class="list-unstyled m-0">
-			<li><span class="c-icon c-icon--phone"></span><a href="tel:+15142321185">(514) 232-1185</a></li>
-			<li><span class="c-icon c-icon--email"></span><a href="mailto:info@guillaumeferber.com" alt="email address">info@guillaumeferber.com</a></li>
-			<li><span class="c-icon c-icon--github"></span><a href="https://github.com/guillaumeferber">@guillaumeferber</a></li>
+		<ul class="list-unstyled m-0" itemscope itemtype="http://schema.org/Person">
+			<li><span class="c-icon c-icon--phone"></span><a itemprop="telephone" href="tel:+15142321185">(514) 232-1185</a></li>
+			<li><span class="c-icon c-icon--email"></span><a itemprop="email" href="mailto:info@guillaumeferber.com" alt="email address">info@guillaumeferber.com</a></li>
+			<li><span class="c-icon c-icon--github"></span><a itemprop="url" href="https://github.com/guillaumeferber">@guillaumeferber</a></li>
 		</ul>
 	</div>
 	<div class="c-hero__icon">

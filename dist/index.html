@@ -34,12 +34,14 @@
 			<img src="assets/images/logos/logo.png" alt="Guillaume Ferber - Web Developer">
 		</a>
 	</div>
-	<input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
-	<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+	<!-- <input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
+	<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label> -->
 	<ul class="c-navigation c-navigation--column list-unstyled">
 		<li><a href="#about"><span>About</span></a></li>
-		<li><a href="#technologies"><span>Technologies</span></a></li>
+		<li><a href="#cta"><span>Work with me</span></a></li>
+		<li><a href="#technologies"><span>Savoir-faire</span></a></li>
 		<li><a href="#contact"><span>Contact</span></a></li>
+		<li><a href="index-fr.html"><span>FR</span></a><span class="text-white mb-3 px-3">|</span><a href="/" class="active"><span>EN</span></a></li>
 	</ul>
 
 </nav>
@@ -51,24 +53,26 @@
         <article>
 <!-- start _hero.html-->
 <div class="c-hero c-hero--light">
+	<div class="c-snackbar u-danger">I'm currently <b class="text-uppercase">not</b> <span class="">available</span>
+		<a class="c-snackbar__cta" href="#contact">Contact me !</a>
+	</div>
 	<div class="c-hero__parallax" ></div>
 	<div class="c-hero__title-group">
-		<hgroup>
-			<h1>HI! I'm <span class="text-accent">Guillaume</span></h1>
-			<h2 class="hyphenate paragraph">I'm a web developer in Montreal</h2>
-			<h3>I'm current <span class="u-flicker">not</span> <span class="">available</span></h3>
+		<hgroup itemscope itemtype="http://schema.org/Person">
+			<h1 itemprop="name">HI! I'm <span itemprop="givenName" class="text-accent" >Guillaume</span><span class="u-hidden" aria-hidden="true" itemprop="familyName">FERBER</span></h1>
+			<h2 class="hyphenate paragraph">I'm a <span itemprop="jobTitle">web developer</span> in <span itemprop="workLocation">Montreal</span></h2>
 		</hgroup>
 		<div class="w-75 mt-5">
 			<div class="c-button text-uppercase">
-				<a class="c-button__body h2" href="#contact">Start a projet</a>
+				<a class="c-button__body h2" href="#contact">Start a project</a>
 			</div>
 		</div>
 	</div>
 	<div class="c-hero__alert">
-		<ul class="list-unstyled m-0">
-			<li><span class="c-icon c-icon--phone"></span><a href="tel:+15142321185">(514) 232-1185</a></li>
-			<li><span class="c-icon c-icon--email"></span><a href="mailto:ferber.g@gmail.com" alt="email address">ferber.g@gmail.com</a></li>
-			<li><span class="c-icon c-icon--github"></span><a href="https://github.com/guillaumeferber">@guillaumeferber</a></li>
+		<ul class="list-unstyled m-0" itemscope itemtype="http://schema.org/Person">
+			<li><span class="c-icon c-icon--phone"></span><a itemprop="telephone" href="tel:+15142321185">(514) 232-1185</a></li>
+			<li><span class="c-icon c-icon--email"></span><a itemprop="email" href="mailto:info@guillaumeferber.com" alt="email address">info@guillaumeferber.com</a></li>
+			<li><span class="c-icon c-icon--github"></span><a itemprop="url" href="https://github.com/guillaumeferber">@guillaumeferber</a></li>
 		</ul>
 	</div>
 	<div class="c-hero__icon">
@@ -99,6 +103,7 @@
 			<p>Integration of your custom design into a content management system gives you the freedom to easily update and manage the site on your own.</p>
 		</div>
 	</div>
+	<h4 class="text-center mt-5"><a class="text-white" href="#cta">Want to know more ?</a></h4>
 </div>
 
 <!-- end _intro.html-->
@@ -110,28 +115,28 @@
 <div class="text-white">
 
 <h3 class="mt-5">Who I am</h3>
-<p>Hi, I'm Guillaume. I am a freelance web developer based in Montreal, QC. Since 2020 I've worked with a wide range of companies, from local shops to national brands, and boutique design firms to global ad agencies. My focus is on <i>beautiful, clean digital experiences</i>.</p>
+<p itemscope itemtype="http://schema.org/Person">Hi, I'm <span itemprop="givenName">Guillaume</span><span class="u-hidden" aria-hidden="true" itemprop="familyName">FERBER</span>. I am a <span itemprop="jobTitle">freelance web developer</span> based in <span itemprop="workLocation">Montreal, QC</span>. Since 2018 I've worked with a wide range of companies, from local shops to national brands, and boutique design firms to global ad agencies. My focus is on <i>beautiful, clean digital experiences</i>.</p>
 
 <h3 class="mt-5">What I do</h3>
-<p>My background and training is in graphic design, so my first objective is to create a beautiful and user-friendly website. When it's time to build, I integrate the unique design into WordPress, Shopify, or custom build depending on your needs.
+<p>My background and training is in graphic design, so my first objective is to create a beautiful and user-friendly website. When it's time to build, I integrate the unique design into WordPress, Shopify, or custom build depending on your needs.</p>
 
-In general, I prefer to work on full, custom website designs and/or rebuilds. It's with these kind of projects I can really provide the most value and quality, so I don't tend to take on small incremental work or just fixing existing sites.
+<p>In general, I prefer to work on full, custom website designs and/or rebuilds. It's with these kind of projects I can really provide the most value and quality, so I don't tend to take on small incremental work or just fixing existing sites.</p>
 
-Over the years, my network of partners has grown to include some incredible back-end developers, copywriters, photographers, and branding specialists so I can scale up or down any project based on needs.</p>
+<p>Over the years, my network of partners has grown to include some incredible back-end developers, copywriters, photographers, and branding specialists so I can scale up or down any project based on needs.</p>
 
 <h3 class="mt-5">My Process</h3>
 <p>For a standard site, my process is three-fold.
 	<ol>
-		<li>The Discovery phase. This is where we discuss the scope of the site, as well as your branding and what aesthetic you want to portray.</li>
-		<li>The Design phase. Here I'll take all the information we've gathered and create some mockups for you. You'll send me feedback, and I'll send you revisions, and we'll keep doing that until the design is complete.</li>
-		<li>The Coding phase. Here I'll code the site fully and then send you a live beta version. You can test it and make any final changes and then I'll push the site live.</li>
+		<li><b>The Discovery phase</b>. This is where we discuss the scope of the site, as well as your branding and what aesthetic you want to portray.</li>
+		<li><b>The Design phase</b>. Here I'll take all the information we've gathered and create some mockups for you. You'll send me feedback, and I'll send you revisions, and we'll keep doing that until the design is complete.</li>
+		<li><b>The Coding phase</b>. Here I'll code the site fully and then send you a live beta version. You can test it and make any final changes and then I'll push the site live.</li>
 	</ol>
 </p>
 
 <h3 class="mt-5">What I charge</h3>
-<p>I almost always work on a flat fee basis for each project, so I'll quote you a single project price, half will be due up front and the other half upon completion.
+<p>I almost always work on a flat fee basis for each project, so I'll quote you a single project price, half will be due up front and the other half upon completion.</p>
 
-Every project is different so I don't have a set range or price list, but if you contact me with a description of your site I'll get back to you with a personalized quote.</p>
+<p>Every project is different so I don't have a set range or price list, but if you <a href="#contact">contact me</a> with a description of your site I'll get back to you with a personalized quote.</p>
 
 <!-- end _about.html-->
             </section>
@@ -140,7 +145,7 @@ Every project is different so I don't have a set range or price list, but if you
 <!-- start _technologies.html-->
 <section class="resume-section p-lg-5 d-flex align-items-center text-white" >
 	<div class="w-100" id="technologies">
-		<h2 class="mb-5 mt-5">Technologies</h2>
+		<h2 class="mb-5 mt-5">Savoir-faire</h2>
 
 		<h4 class="mb-3">Programming Languages &amp; Tools</h4>
 		<ul class="list-inline c-list c-list--dev-icons">
@@ -198,7 +203,7 @@ Every project is different so I don't have a set range or price list, but if you
             <section class="c-section c-section--primary">
 <!-- start _contact.html-->
 <h2 id="contact" class="mb-5">Let's get in touch!</h2>
-<p class="text-white">If you have a project in mind you think I'd be a good fit for, the best thing to do is shoot me an email to <a href="mailto:ferber.g@gmail.com" class="text-accent">ferber.g@gmail.com</a> and tell me a little bit about your project. Then we can take things from there.</p>
+<p itemscope itemtype="http://schema.org/Person" class="text-white">If you have a project in mind you think I'd be a good fit for, the best thing to do is shoot me an email to <a itemprop="email" href="mailto:info@guillaumeferber.com" class="text-accent">info@guillaumeferber.com</a> and tell me a little bit about your project. Then we can take things from there.</p>
 <h3 class="mt-5">Thanks</h3>
 </div>
 

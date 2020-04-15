@@ -18,7 +18,7 @@
         margin-top: 2rem;
     }
     a {
-        color: darken(#fff, 10%);
+        color: darken(#fff, 25%);
         text-decoration: none;
         font-size: 1.5vw;
         text-transform: uppercase;
@@ -27,11 +27,16 @@
         transition: all $animation-duration $animation-style $animation-delay;
         &:hover,
         &:active,
-        &:focus,
-        &.active {
+        &.active,
+        &:focus {
             color: var(--white);
             transform: translateX(1rem);
         }
+
+    }
+    .active {
+        pointer-events: none;
+        cursor: default;
     }
     &.c-navigation--column {
         flex-direction: column;

@@ -136,8 +136,12 @@ const zippify = () => {
   .pipe(dest(configuration.folders.dest ));
 }
 
+const copyConfigFiles = () => {
+  return src('./.htaccess').pipe(dest(configuration.folders.dest));
+}
+
 exports.html = series(html.prettify, html.extend, html.htmlClean);
 
 exports.default = series(parallel(css, js, this.html), unCss, copyFolder);
 exports.watch = series(this.default, parallel(connectServer, watchAssets, openServer));
-exports.build = series(parallel(css, js), this.html, unCss, copyFolder, zippify);
+exports.build = series(parallel(css, js), this.html, unCss, copyFolder, copyConfigFiles, zippify);

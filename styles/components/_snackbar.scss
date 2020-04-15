@@ -1,0 +1,35 @@
+.c-snackbar {
+	position: fixed;
+	padding: 1rem 2rem;
+	top: 0; left: calc(50% - 50px / 2);
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	background-color: var(--black);
+	text-align: center;
+	color: var(--white);
+
+	&.u-success {
+		background-color: var(--green);
+		color: var(--black);
+	}
+	&.u-danger {
+		background-color: var(--accent);
+		.c-snackbar__cta {
+			display: none;
+		}
+	}
+}
+
+.c-snackbar__cta {
+	display: inline-block;
+	position: relative;
+	text-indent: 2rem;
+	&:before {
+		position: absolute;
+		display: inline-block;
+		left: -1.5rem;
+		color: inherit;
+		text-decoration: none;
+		content: '\2192';
+	}
+}
