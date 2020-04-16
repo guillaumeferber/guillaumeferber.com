@@ -62,7 +62,7 @@ var RouterLinkModule = (function(doc) {
         if (nav) {
             [].map.call(nav.querySelectorAll(config.itemList), function(link) {
                 link.addEventListener('click', function(evt) {
-                    evt.preventDefault();
+                    // evt.preventDefault();
                     [].map.call(nav.querySelectorAll(config.itemList), function(item) {
                         item.classList.remove('active');
                     });
@@ -93,18 +93,6 @@ var NavigationModule = (function(doc) {
                 selector.checked = false;
             }
         }
-        doc.addEventListener('click', function(e) {
-            var target = e.target;
-            var menu = doc.querySelector(config.menu);
-            if (!menu) { return; }
-            if ((target.tagName === 'INPUT' && target === selector)) {
-                return;
-            } else {
-                if (menu.contains(target)) { return; }
-                body.classList.contains('open') ? body.classList.remove('open') : null;
-                selector.checked = false;
-            }
-        }, false);
         window.addEventListener('resize', function(e) {
             body.clientWidth < 768 ? body.classList.remove('open') : !body.classList.contains('open') ? body.classList.add('open') : null;
         }, false);

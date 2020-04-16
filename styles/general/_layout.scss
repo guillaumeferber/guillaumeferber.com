@@ -45,7 +45,7 @@ main {
     main aside {
         left: -100%;
         body.open & {
-            width: 50vw;
+            width: 55vw;
             left: 0;
         }
     }
@@ -55,13 +55,13 @@ main {
         width: 24vw;
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     body.open main {
         padding-left: 0;
     }
     main aside {
         left: -100%;
-        width: 50vw;
+        width: 55vw;
         visibility: hidden;
         opacity: 0;
         transition: $transition;

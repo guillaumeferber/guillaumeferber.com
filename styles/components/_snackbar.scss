@@ -1,13 +1,17 @@
 .c-snackbar {
 	position: fixed;
 	padding: 1rem 2rem;
-	top: 0; left: calc(50% - 50px / 2);
+	margin-left:  calc(24vw / 3);
+	top: 0; left: calc(50% - 20vw);
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
 	background-color: var(--black);
 	text-align: center;
 	color: var(--white);
-
+	body.open & {
+		margin-left: 20vw;
+		left: calc(50% - 20vw);
+	}
 	&.u-success {
 		background-color: var(--green);
 		color: var(--black);
@@ -36,7 +40,25 @@
 
 @media (max-width: 767px) {
 	.c-snackbar {
+		margin-left: 0;
 		width: 260px;
 		left: calc(50% - 260px / 2);
+		body.open & {
+			margin-left: 0;
+			left: calc(50% - 260px / 2);
+		}
 	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.c-snackbar {
+		margin-left: 0;
+		width: 260px;
+		left: calc(50% - 260px / 2);
+		body.open & {
+			margin-left: 0;
+			left: calc(50% - 260px / 2);
+		}
+	}
+
 }
