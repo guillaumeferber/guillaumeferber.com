@@ -1,13 +1,5 @@
 // title fonts
 @font-face {
-    font-family: 'bebas_neueregular';
-    src: url('./assets/fonts/bebasneueregular-webfont.woff2') format('woff2'),
-         url('./assets/fonts/bebasneueregular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'bebas_neuebold';
     src: url('./assets/fonts/bebasneuebold-webfont.woff2') format('woff2'),
          url('./assets/fonts/bebasneuebold-webfont.woff') format('woff');
@@ -36,19 +28,6 @@ h1, h2, h3, h4,
         margin-bottom: 35px;
     }
 }
-
-h5, .h5 {
-    font-family: 'bebas_neueregular', sans-serif;
-    font-weight: 400;
-    &.paragraph {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 200;
-        letter-spacing: 1px;
-        line-height: 1.6;
-        margin-bottom: 35px;
-    }
-}
-
 
 p {
     font-family: 'Open Sans', sans-serif;

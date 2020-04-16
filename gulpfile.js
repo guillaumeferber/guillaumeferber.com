@@ -29,7 +29,8 @@ const configuration = {
     zip: '.zip'
   },
   configFiles: [
-    './.htaccess'
+    './.htaccess',
+    './service-worker.js',
   ],
   assets: {
     directory: {
