@@ -1,17 +1,15 @@
 .c-navigation-container {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     position: relative;
     padding-top: 5rem;
     width: 0;
-    transition: width .15s ease-out 0s, visible 0s linear 0s ;
+    transition: width .15s ease-out 0s, visible .15s linear 0s ;
     visibility: hidden;
     body.open & {
         width: 100%;
         visibility: visible;
-    }
-    &.c-navigation-container--column {
-        flex-direction: column;
     }
 }
 .c-navigation {
@@ -57,7 +55,7 @@
     opacity: 0;
 }
 .hamburger{
-    position: absolute;
+    position: fixed;
     top: 1rem; left: 1rem;
     height: 50px;
     width: 50px;
@@ -115,8 +113,21 @@
     }
 }
 
-@media (max-width: 768px) and (orientation: portrait) {
+@media (max-width: 768px) {
+    .c-navigation {
+        margin-top: 4rem;
+        padding-left: calc(50% - 170px / 1.5);
+        a {
+            font-size: calc(14px + 1.5vw);
+        }
+    }
+}
+
+@media (max-width: 767px) {
     .c-navigation {
         padding-left: 1.4rem;
+    }
+    .c-navigation a {
+        font-size: calc(14px + 1.5vw);
     }
 }

@@ -6,18 +6,12 @@ var configuration = {
         tabListItemTargetAttr: 'href'
     },
     routerLink: {
-        nodeList: {
-            selector: '[selector]',
-            itemList: '[name=candidate_apply]',
-            nav: '.c-header nav > ul'
-    },
-        form: {
-            id: '#candidate',
-            input: 'candidate_expertise'
-        },
-        targetAttr: 'routerLink'
+        nav: '.js-navigation-selector',
+        itemList: 'li > a',
+        targetAttr: 'href'
     },
     navigation: {
-        elem: '.js-nav'
+        elem: '.js-nav',
+        menu: '.js-nav ~ aside'
     }
 };

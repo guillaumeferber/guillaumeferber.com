@@ -43,25 +43,28 @@
     <body class="position-relative open">
         <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
         <main>
-            <aside>
-<!-- start _navigation.html-->
+<!-- start _hamburger.html-->
 <input class="hamburger-btn js-nav" type="checkbox" id="menu-btn" checked/>
 <label class="hamburger" for="menu-btn">
 	<span class="line"></span>
 	<span class="line"></span>
 	<span class="line"></span>
 </label>
-<nav class="c-navigation-container c-navigation-container--column" aria-label="Main">
+
+<!-- end _hamburger.html-->
+            <aside>
+<!-- start _navigation.html-->
+<nav class="c-navigation-container" aria-label="Main">
 	<div class="c-picture-badge">
 		<a href="index.html">
 			<img src="assets/images/logos/logo.png" alt="Guillaume Ferber - Web Developer">
 		</a>
 	</div>
-	<ul class="c-navigation c-navigation--column list-unstyled">
-		<li><a href="#about"><span>About</span></a></li>
-		<li><a href="#cta"><span>Work with me</span></a></li>
-		<li><a href="#technologies"><span>Savoir-faire</span></a></li>
-		<li><a href="#contact"><span>Contact</span></a></li>
+	<ul class="c-navigation c-navigation--column list-unstyled js-navigation-selector">
+		<li><a href="#about">About</a></li>
+		<li><a href="#cta">Work with me</a></li>
+		<li><a href="#technologies">Savoir-faire</a></li>
+		<li><a href="#contact">Contact</a></li>
 		<li><a href="index-fr.html"><span>FR</span></a><span class="text-white mb-3 px-3">|</span><a href="/" class="active"><span>EN</span></a></li>
 	</ul>
 
@@ -83,7 +86,7 @@
 			<h1 itemprop="name">HI! I'm <span itemprop="givenName" class="text-blue" >Guillaume</span><span class="u-hidden" aria-hidden="true" itemprop="familyName">FERBER</span></h1>
 			<h2 class="hyphenate paragraph">I'm a <span itemprop="jobTitle">web developer</span> in <span itemprop="workLocation">Montreal</span></h2>
 		</hgroup>
-		<div class="w-75 mt-5">
+		<div class="c-hero__cta mt-5">
 			<div class="c-button text-uppercase">
 				<a class="c-button__body h2" href="#contact">Start a project</a>
 			</div>

@@ -55,55 +55,19 @@ var RouterLinkModule = (function(doc) {
     function init(conf) {
         // methods
         _addEventListeners(conf);
-        _getQueryParams(location, conf);
     }
 
     var _addEventListeners = function(config) {
-        var selector = doc.querySelector(config.nodeList.selector);
-        var itemList = doc.querySelectorAll(config.nodeList.itemList);
-        var targetLink = doc.querySelector("[" + config.targetAttr + "]");
-        var nav = doc.querySelector(config.nodeList.nav);
-        var initialHref = targetLink && targetLink.href.slice();
-        if (targetLink && selector && itemList) {
-            // initial values
-            targetLink.href = initialHref + '?expertise=' + itemList[0].value;
-            targetLink.setAttribute('aria-label', itemList[0].value);
-
-            // on input radio change
-            for (var i = 0; i <  itemList.length; i++) {
-                itemList[i].addEventListener('change', function(e) {
-                    e.preventDefault();
-                    if ('' !== e.target.value) {
-                        targetLink.href = initialHref + config.form.id + '?expertise=' + e.target.value;
-                        targetLink.setAttribute('aria-label', e.target.value);
-                        selector.removeAttribute('open');
-                        targetLink.focus();
-                    }
-
-                }, false);
-            }
-        }
+        var nav = doc.querySelector(config.nav);
         if (nav) {
-            Array.from(nav.querySelectorAll('li > a')).map(function(anchor) {
-                anchor.classList.remove('active');
-                if ('' !== anchor.getAttribute('href') && anchor.href.indexOf(location.pathname) > -1 && '/' !== location.pathname) {
-                    anchor.classList.add('active');
-                }
-            });
-        }
-    }
-
-    var _getQueryParams = function(location, config) {
-        var form = doc.querySelector(config.form.id);
-        if (form && location.search) {
-            form.scrollIntoView({
-                behavior: 'smooth',
-                block: "end",
-            });
-            Array.from(form.elements).map(function(element) {
-                if (element.type === 'hidden') {
-                    element.value = location.search.split('=')[1];
-                }
+            [].map.call(nav.querySelectorAll(config.itemList), function(link) {
+                link.addEventListener('click', function(evt) {
+                    evt.preventDefault();
+                    [].map.call(nav.querySelectorAll(config.itemList), function(item) {
+                        item.classList.remove('active');
+                    });
+                    link.classList.add('active');
+                }, false);
             });
         }
     }
@@ -121,23 +85,34 @@ var NavigationModule = (function(doc) {
 
     function _addEventListeners (config) {
         var selector = doc.querySelector(config.elem);
-        if (!selector) {
-            return;
-        }
+        if (!selector) { return; }
         var body = doc.querySelector('body');
         window.onload = function(e) {
             if (body.clientWidth < 768) {
                 body.classList.contains('open') ? body.classList.remove('open') : null;
+                selector.checked = false;
             }
         }
+        doc.addEventListener('click', function(e) {
+            var target = e.target;
+            var menu = doc.querySelector(config.menu);
+            if (!menu) { return; }
+            if ((target.tagName === 'INPUT' && target === selector)) {
+                return;
+            } else {
+                if (menu.contains(target)) { return; }
+                body.classList.contains('open') ? body.classList.remove('open') : null;
+                selector.checked = false;
+            }
+        }, false);
         window.addEventListener('resize', function(e) {
             body.clientWidth < 768 ? body.classList.remove('open') : !body.classList.contains('open') ? body.classList.add('open') : null;
-        })
+        }, false);
 
         selector.addEventListener('click', function(event) {
             var state = event.target.checked;
             state ? body.classList.add('open') : body.classList.remove('open');
-        });
+        }, false);
     }
 
     return {

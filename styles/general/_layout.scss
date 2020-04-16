@@ -1,4 +1,5 @@
 html { scroll-behavior: smooth; }
+$transition: all .15s ease-out 0s;
 body {
     width: 100%;
     background-color: var(--black);
@@ -10,21 +11,24 @@ main {
     display: flex;
     flex-flow: row nowrap;
     padding-left: 0;
+    transition: $transition;
     body.open & {
-        transition: width .15s ease-out 0s;
+        transition: $transition;
         padding-left: 20vw;
     }
     aside {
         position: fixed;
-        width: 0;
-        transition: width .15s ease-out 0s;
+        width: 20vw;
+        left: -100%;
+        transition: $transition;
         z-index: 1;
-        body.open & {
-            width: 20vw;
-        }
         height: 100vh;
-        left: 0;
         background-color: lighten(#101010, 8%);
+        body.open & {
+            visibility: visible;
+            opacity: 1;
+            left: 0;
+        }
     }
 
     & > .content {
@@ -39,20 +43,27 @@ main {
         }
     }
     main aside {
-        width: 0;
+        left: -100%;
         body.open & {
-            width: 24vw;
+            width: 50vw;
+            left: 0;
         }
     }
 }
-
+@media (max-width: 1024px) and (orientation: landscape) {
+    body.open main aside {
+        width: 24vw;
+    }
+}
 @media (max-width: 767px) {
-    main {
+    body.open main {
         padding-left: 0;
     }
     main aside {
-        width: 0;
+        left: -100%;
+        width: 50vw;
         visibility: hidden;
         opacity: 0;
+        transition: $transition;
     }
 }
