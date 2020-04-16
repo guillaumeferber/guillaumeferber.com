@@ -124,12 +124,17 @@
     .c-hero__title-group {
         width: 100%;
         max-width: 80%;
-        left: $marginRegular / 2;
-        right: $marginRegular / 2;
         h1 {
             font-size: 4rem;
-            margin-top: 60px;
-            margin-bottom: 60px;
+            margin-top: $marginRegular / 2;
+            margin-bottom: $marginRegular / 4;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: $marginRegular / 4
+        }
+        .c-hero__cta {
+            margin-top: $marginRegular / 2;
         }
     }
     .c-hero__alert {
