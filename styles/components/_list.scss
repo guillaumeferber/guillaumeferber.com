@@ -55,6 +55,8 @@
         font-size: 3rem;
         transition: all .6s ease-out 0s;
         transform: scale(1);
+        &:focus,
+        &:active,
         &:hover {
             transform: scale(1.1);
             text-shadow:

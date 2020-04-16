@@ -140,6 +140,8 @@ section.c-section--bg-image,
 @media (max-width: 768px) {
     section.c-section,
     .c-section {
+        padding-left: $marginRegular / 2;
+        padding-right: $marginRegular / 2;
         .c-section__title {
             width: 100%;
         }
