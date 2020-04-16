@@ -28,6 +28,9 @@ const configuration = {
     js: '.js',
     zip: '.zip'
   },
+  configFiles: [
+    './.htaccess'
+  ],
   assets: {
     directory: {
       root: 'assets/',
@@ -137,7 +140,7 @@ const zippify = () => {
 }
 
 const copyConfigFiles = () => {
-  return src('./.htaccess').pipe(dest(configuration.folders.dest));
+  return src(configuration.configFiles).pipe(dest(configuration.folders.dest));
 }
 
 exports.html = series(html.prettify, html.extend, html.htmlClean);
