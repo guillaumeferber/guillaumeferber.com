@@ -10,7 +10,7 @@
     font-family: 'open_sanslight';
     src: url('./assets/fonts/opensans-light-webfont.woff2') format('woff2'),
          url('./assets/fonts/opensans-light-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -18,7 +18,7 @@
     font-family: 'open_sansbold';
     src: url('./assets/fonts/opensans-bold-webfont.woff2') format('woff2'),
          url('./assets/fonts/opensans-bold-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
 
 }
@@ -27,11 +27,10 @@ h1 { font-size: 90px; }
 h2 { font-size: 60px; }
 h3 { font-size: 40px; }
 h4 { font-size: 30px; }
-h5 { font-size: 18px; }
 h3.highlight { font-size: 125px; }
 
-h1, h2, h3, h4,
-.h1, .h2, .h3, .h4 {
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
     display: block;
     font-family: 'bebas_neuebold', sans-serif;
     font-weight: 700;
@@ -52,4 +51,8 @@ p {
     letter-spacing: 1px;
     line-height: 1.6;
     margin-bottom: 35px;
+}
+b, strong {
+    font-family: 'open_sansbold', sans-serif;
+    font-weight: 700;
 }

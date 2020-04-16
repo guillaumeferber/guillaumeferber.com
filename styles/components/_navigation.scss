@@ -25,10 +25,8 @@
     a {
         color: darken(#fff, 25%);
         text-decoration: none;
-        font-size: 1.5vw;
+        font-size: 1.4vw;
         text-transform: uppercase;
-        font-weight: 700;
-        font-family: 'open_sanslight', sans-serif;
         transition: all $animation-duration $animation-style $animation-delay;
         &:hover,
         &:active,
