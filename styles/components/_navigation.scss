@@ -121,8 +121,13 @@
 }
 
 @media (max-width: 767px) {
+    .c-navigation-container {
+        padding-top: 4rem;
+    }
     .c-navigation {
+        margin-top: 3rem;
         padding-left: 1.4rem;
+        li + li {     margin-top: 1.6rem; }
     }
     .c-navigation a {
         font-size: calc(12px + 1.5vw);
