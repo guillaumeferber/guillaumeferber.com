@@ -5,7 +5,7 @@ const precacheResources = [
   '/index-fr.html',
   '/style.min.css',
   '/assets/images/main.webp',
-  '/assets/images/logo/cms.svg',
+  '/assets/images/logos/cms.svg',
   '/assets/images/logos/design.svg',
   '/assets/images/logos/email.svg',
   '/assets/images/logos/github.svg',
