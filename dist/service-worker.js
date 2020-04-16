@@ -16,7 +16,9 @@ const precacheResources = [
   'assets/fonts/fa-brands-400.svg',
   'assets/fonts/fa-brands-400.ttf',
   'assets/fonts/fa-brands-400.woff',
-  'assets/fonts/fa-brands-400.woff2'
+  'assets/fonts/fa-brands-400.woff2',
+  'assets/fonts/opensans-light-webfont.woff',
+  'assets/fonts/opensans-light-webfont.woff2'
 ];
 
 self.addEventListener('install', event => {
