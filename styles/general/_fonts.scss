@@ -12,8 +12,17 @@
          url('./assets/fonts/opensans-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('./assets/fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('./assets/fonts/opensans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
 }
+
 h1 { font-size: 90px; }
 h2 { font-size: 60px; }
 h3 { font-size: 40px; }
