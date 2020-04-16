@@ -1,6 +1,5 @@
 const cacheName = 'cache-v1';
 const precacheResources = [
-  '/',
   'index.html',
   'index-fr.html',
   'style.min.css',
@@ -10,7 +9,14 @@ const precacheResources = [
   'assets/images/logo/email.svg',
   'assets/images/logo/github.svg',
   'assets/images/logo/next.svg',
-  'assets/images/logo/phone.svg'
+  'assets/images/logo/phone.svg',
+  'assets/fonts/bebasneuebold-webfont.woff',
+  'assets/fonts/bebasneuebold-webfont.woff2',
+  'assets/fonts/fa-brands-400.eot',
+  'assets/fonts/fa-brands-400.svg',
+  'assets/fonts/fa-brands-400.ttf',
+  'assets/fonts/fa-brands-400.woff',
+  'assets/fonts/fa-brands-400.woff2'
 ];
 
 self.addEventListener('install', event => {
