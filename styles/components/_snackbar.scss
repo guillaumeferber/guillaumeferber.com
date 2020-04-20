@@ -9,6 +9,7 @@
 	text-align: center;
 	color: var(--black);
 	font-size: .85rem;
+	z-index: 99;
 	body.open & {
 		margin-left: 20vw;
 	}

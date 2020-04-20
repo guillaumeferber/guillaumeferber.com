@@ -10,7 +10,7 @@ The project is structured as a series of partial files to be put together with a
 
 ### Version
 
-> 1.1.0
+> 1.0.4
 
 ## Installation ##
 

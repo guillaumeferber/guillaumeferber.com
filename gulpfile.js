@@ -32,6 +32,8 @@ const configuration = {
     './.htaccess',
     './service-worker.js',
     './manifest.json',
+    './robots.txt',
+    './sitemap.xml',
   ],
   assets: {
     directory: {
