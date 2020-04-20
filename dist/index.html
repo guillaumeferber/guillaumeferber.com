@@ -79,7 +79,11 @@
 <nav class="c-navigation-container" aria-label="Main">
 	<div class="c-picture-badge">
 		<a href="index.html">
-			<img src="assets/images/main.webp" alt="Guillaume Ferber - Web Developer">
+			<picture>
+				<source srcset='assets/images/main.webp' type='image/webp'>
+				<source srcset='assets/images/main.jp2' type='image/jp2'>
+				<img srcset='assets/images/main.jpg' alt='Guillaume Ferber - Développeur Web'>
+			</picture>
 		</a>
 	</div>
 	<ul class="c-navigation c-navigation--column list-unstyled js-navigation-selector">

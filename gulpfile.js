@@ -100,6 +100,10 @@ const html = {
   htmlClean() {
     return src([ configuration.folders.dest + 'base', configuration.folders.dest + 'components'])
     .pipe(clean())
+  },
+  destClean() {
+    return src(configuration.folders.dest)
+    .pipe(clean())
   }
 }
 
@@ -147,6 +151,6 @@ const copyConfigFiles = () => {
 
 exports.html = series(html.prettify, html.extend, html.htmlClean);
 
-exports.default = series(parallel(css, js, this.html), unCss, copyFolder);
+exports.default = series(html.destClean, parallel(css, js, this.html), unCss, copyFolder);
 exports.watch = series(this.default, parallel(connectServer, watchAssets, openServer));
-exports.build = series(parallel(css, js), this.html, unCss, copyFolder, copyConfigFiles, zippify);
+exports.build = series(html.destClean, parallel(css, js), this.html, unCss, copyFolder, copyConfigFiles, zippify);

@@ -5,6 +5,8 @@ var precacheResources = [
   '/index-fr.html',
   '/style.min.css',
   '/assets/images/main.webp',
+  '/assets/images/main.jp2',
+  '/assets/images/main.jpg',
   '/assets/images/logos/cms.svg',
   '/assets/images/logos/design.svg',
   '/assets/images/logos/email.svg',

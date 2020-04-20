@@ -8,6 +8,6 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}/$1 [R=301,L]
 #Redirect /index-fr.html /fr/
 
 //Caching schema
-<FilesMatch "\.(js|jpg|png|webp|css|woff|woff2|ico|svg)$">
+<FilesMatch "\.(js|jpg|jp2|webp|png|webp|css|woff|woff2|ico|svg)$">
 Header set Cache-Control "public, max-age=160704000"
 </FilesMatch>
