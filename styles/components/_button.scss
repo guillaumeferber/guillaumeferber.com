@@ -60,4 +60,9 @@ $type: ease-out;
             border-left-color: var(--primary);
         }
     }
+
+    &--small {
+        min-width: auto;
+        max-width: max-content;
+    }
 }

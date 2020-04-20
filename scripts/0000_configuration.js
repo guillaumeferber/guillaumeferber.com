@@ -13,5 +13,9 @@ var configuration = {
     navigation: {
         elem: '.js-nav',
         menu: '.js-nav ~ aside'
+    },
+    installApp: {
+        buttonId: '#installBtn',
+        bannerId: '#installBanner'
     }
 };

@@ -1,5 +1,5 @@
-const cacheName = 'cache-v1';
-const precacheResources = [
+var cacheName = 'cache-v1';
+var precacheResources = [
   '/',
   '/index.html',
   '/index-fr.html',
@@ -22,24 +22,24 @@ const precacheResources = [
   '/assets/fonts/opensans-light-webfont.woff2'
 ];
 
-self.addEventListener('install', event => {
+self.addEventListener('install', function(event) {
   console.log('Service worker install event!');
   event.waitUntil(
     caches.open(cacheName)
-      .then(cache => {
+      .then(function(cache) {
         return cache.addAll(precacheResources);
       })
   );
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', function(event) {
   console.log('Service worker activate event!');
 });
 
-self.addEventListener('fetch', event => {
-  console.log('Fetch intercepted for:', event.request.url);
+self.addEventListener('fetch', function(event) {
+  // console.log('Fetch intercepted for:', event.request.url);
   event.respondWith(caches.match(event.request)
-    .then(cachedResponse => {
+    .then(function(cachedResponse) {
         if (cachedResponse) {
           return cachedResponse;
         }

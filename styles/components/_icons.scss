@@ -3,7 +3,6 @@ $dimension: 1rem;
 	display: inline-block;
 	height: $dimension; width: $dimension;
 	color: var(--white);
-
 }
 
 .c-icon--email {
@@ -37,4 +36,8 @@ $dimension: 1rem;
 }
 .c-icon--code {
 	font-size: 3rem;
+}
+
+.c-icon--invert {
+	filter: invert(0);
 }
