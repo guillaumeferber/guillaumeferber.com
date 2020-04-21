@@ -1,4 +1,6 @@
+# Bloquer tous les robots, sauf les robots AdsBot
 User-agent: *
-Allow: /
+User-agent: AdsBot-Google
+Disallow: /
 
 Sitemap: https://guillaumeferber.com/sitemap.xml
