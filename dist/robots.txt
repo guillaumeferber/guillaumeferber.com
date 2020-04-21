@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://guillaumeferber.com/sitemap.xml

@@ -1,6 +1,6 @@
 .c-hero {
     position: relative;
-    padding: 0 0 5%;
+    padding: 0 5%;
     width: 100vw;
     height: 100vh;
     left: 0; top: 0;
@@ -9,7 +9,6 @@
     background-blend-mode: multiply;
     body.open & {
         width: 80vw;
-        left: 20vw;
     }
     &.c-hero--light {
         background-color: lighten($color: #151515, $amount: 2%);
@@ -76,7 +75,7 @@
 
 .c-hero__icon {
     position: absolute;
-    bottom: .5rem;
+    bottom: 2.5rem;
     left: calc(50% - 20px);
     transform: rotate(90deg) translate(0, 0);
     animation: bounce .8s infinite alternate;
@@ -102,11 +101,11 @@
         margin-top: $marginRegular;
         margin-left: auto;
         margin-right: auto;
-        left: auto;
+        left: 0;
     }
     .c-hero {
         body.open & {
-            left: 24vw;
+            left: 0;
         }
     }
 }
@@ -125,6 +124,7 @@
     .c-hero__title-group {
         width: 100%;
         max-width: 80%;
+        left: 9.79vw;
         h1 {
             font-size: 4rem;
             margin-top: $marginRegular / 2;

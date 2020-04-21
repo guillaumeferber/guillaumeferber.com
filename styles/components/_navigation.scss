@@ -17,7 +17,7 @@
     flex-flow: row nowrap;
     justify-content: flex-end;
     height: 100%;
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding-left: calc(50% - 170px / 2);
     li + li {
         margin-top: 2rem;
@@ -35,7 +35,6 @@
             color: var(--white);
             transform: translateX(1rem);
         }
-
     }
     .active {
         pointer-events: none;
@@ -123,9 +122,9 @@
         padding-top: 4rem;
     }
     .c-navigation {
-        margin-top: 3rem;
+        margin-top: 2rem;
         padding-left: 1.4rem;
-        li + li {     margin-top: 1.6rem; }
+        li + li {     margin-top: 1.3rem; }
     }
     .c-navigation a {
         font-size: calc(12px + 1.5vw);
