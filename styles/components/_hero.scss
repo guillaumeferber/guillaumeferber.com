@@ -111,6 +111,9 @@
 }
 
 @media (max-width: 768px) {
+    .c-hero__title-group__item--intro {
+        display: block;
+    }
     .c-hero {
         body.open & {
             width: 100vw;
@@ -144,5 +147,11 @@
 }
 
 @media (max-width: 767px) {
+    .c-hero__title-group {
+        top: 10vh;
+    }
+    .c-hero__title-group__item--intro {
+        font-size: 3rem;
+    }
     .c-hero__alert { display: none;}
 }
