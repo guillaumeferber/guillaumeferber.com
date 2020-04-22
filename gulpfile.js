@@ -105,7 +105,7 @@ const html = {
   },
   destClean() {
     return src(configuration.folders.dest)
-    .pipe(clean())
+    .pipe(clean());
   }
 }
 
