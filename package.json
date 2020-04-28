@@ -31,10 +31,10 @@
     "gulp-html-extend": "^1.1.6",
     "gulp-html-prettify": "0.0.1",
     "gulp-open": "^3.0.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
     "gulp-uncss": "^1.0.6",
-    "gulp-w3c-html-validator": "^2.0.0",
+    "gulp-w3c-html-validator": "^2.0.1",
     "gulp-zip": "^5.0.1"
   },
   "dependencies": {

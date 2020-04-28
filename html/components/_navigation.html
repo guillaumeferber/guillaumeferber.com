@@ -1,6 +1,6 @@
 <nav class="c-navigation-container" aria-label="Main">
 	<div class="c-picture-badge">
-		<a href="index.html">
+		<a href="/">
 			<picture>
 				<source srcset='assets/images/main.webp' type='image/webp'>
 				<source srcset='assets/images/main.jp2' type='image/jp2'>
@@ -14,8 +14,12 @@
 		<li><a href="#technologies">Savoir-faire</a></li>
 		<li><a href="https://medium.com/@ferber.g" class="external">Blog</a></li>
 		<li><a href="#contact">Contact</a></li>
-		<li><a href="index-fr.html"><span>FR</span></a><span class="text-white mb-3 px-3">|</span><a href="/" class="active"><span>EN</span></a></li>
-		<li><!-- @@include ./_install.html --></li>
+		<li class="d-flex jusrtify-content-between align-items-center">
+			<div><a href="index-fr.html"><span>FR</span></a><span class="text-white mb-3 px-3">|</span><a href="/" class="active"><span>EN</span></a></div>
+			<div id="installBanner" class="banner">
+				<button id="installBtn"></button>
+			</div>
+		</li>
 	</ul>
 
 </nav>

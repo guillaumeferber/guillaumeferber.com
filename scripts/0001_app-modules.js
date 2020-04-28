@@ -123,7 +123,6 @@ var InstallAppModule = (function(doc) {
 
             // Show the prompt
             deferredPrompt.prompt();
-
             // Wait for the user to respond to the prompt
             deferredPrompt.userChoice.then(function(choiceResult) {
                 if (choiceResult.outcome === 'accepted') {
