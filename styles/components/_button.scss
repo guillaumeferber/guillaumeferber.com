@@ -66,12 +66,3 @@ $type: ease-out;
         max-width: max-content;
     }
 }
-
-#installBtn {
-    outline: none;
-    border: 0 none;
-    height: 30px; width: 20px;
-    background: center / 80% no-repeat url(assets/images/logos/download.svg);
-    filter: invert(100%);
-    transform: translateX(20px);
-}
