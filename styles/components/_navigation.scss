@@ -130,3 +130,10 @@
         font-size: calc(12px + 1.5vw);
     }
 }
+@media (min-width: 1024px) {
+    .hamburger,
+    .hamburger-btn {
+        display: none;
+        pointer-events: none;
+    }
+}

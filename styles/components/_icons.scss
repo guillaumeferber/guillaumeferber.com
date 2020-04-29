@@ -17,10 +17,13 @@ $dimension: 1rem;
 	background: url(assets/images/logos/github.svg) top left no-repeat;
 	filter: invert(100%);
 }
-
+.c-icon--up ,
 .c-icon--next {
 	background: url(assets/images/logos/next.svg) top left no-repeat;
 	filter: invert(100%);
+}
+.c-icon--up {
+	transform: rotate(-90deg);
 }
 .c-icon--design {
 	$dimension: $dimension * 4;
@@ -36,4 +39,12 @@ $dimension: 1rem;
 }
 .c-icon--code {
 	font-size: 3rem;
+}
+
+.c-page-icon {
+	position: fixed;
+	bottom: 2rem; right: 2rem;
+	.c-icon {
+        height: 2rem; width: 2rem;
+    }
 }
