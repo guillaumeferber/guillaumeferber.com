@@ -119,23 +119,26 @@ var InstallAppModule = (function(doc) {
           deferredPrompt = event;
 
           // Attach the install prompt to a user gesture
-          document.querySelector(config.buttonId).addEventListener('click', function(event) {
+          var button = document.querySelector(config.buttonId);
+          if (button) {
+            button.addEventListener('click', function(event) {
 
-            // Show the prompt
-            deferredPrompt.prompt();
-            // Wait for the user to respond to the prompt
-            deferredPrompt.userChoice.then(function(choiceResult) {
-                if (choiceResult.outcome === 'accepted') {
-                  console.log('User accepted the A2HS prompt');
-                } else {
-                  console.log('User dismissed the A2HS prompt');
-                }
-                deferredPrompt = null;
+                // Show the prompt
+                deferredPrompt.prompt();
+                // Wait for the user to respond to the prompt
+                deferredPrompt.userChoice.then(function(choiceResult) {
+                    if (choiceResult.outcome === 'accepted') {
+                      console.log('User accepted the A2HS prompt');
+                    } else {
+                      console.log('User dismissed the A2HS prompt');
+                    }
+                    deferredPrompt = null;
+                  });
               });
-          });
 
-          // Update UI notify the user they can add to home screen
-          document.querySelector(config.bannerId).style.display = 'flex';
+              // Update UI notify the user they can add to home screen
+              document.querySelector(config.bannerId).style.display = 'flex';
+          }
         });
     }
 
