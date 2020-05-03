@@ -169,7 +169,12 @@ var AnimationModule = (function(doc) {
     }
 })(window.document);
 // Main module
-var MainModule = (function(ElementSetModule, RouterLinkModule, NavigationModule) {
+var MainModule = (function(
+                    ElementSetModule,
+                    RouterLinkModule,
+                    NavigationModule,
+                    InstallAppModule,
+                    AnimationModule) {
     return {
         init: function(configuration) {
             ElementSetModule.init(configuration.tabSet);
