@@ -143,6 +143,31 @@ var InstallAppModule = (function(doc) {
         init: init
     }
 })(window.document);
+
+var AnimationModule = (function(doc) {
+
+    var init = function(config) {
+        _addEventListeners(config);
+    }
+
+    var _addEventListeners = function(config) {
+        var animatedElementList = doc.querySelectorAll(config.elem);
+        Array.from(animatedElementList).map(function(animatedElement) {
+            animatedElement.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (e.target.getAttribute('href')) {
+                    var target = e.target.getAttribute('href');
+                    doc.querySelector(target).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+                }
+                animatedElement.classList.toggle(config.activeClass);
+            }, false);
+        });
+    }
+
+    return {
+        init: init
+    }
+})(window.document);
 // Main module
 var MainModule = (function(ElementSetModule, RouterLinkModule, NavigationModule) {
     return {
@@ -151,6 +176,13 @@ var MainModule = (function(ElementSetModule, RouterLinkModule, NavigationModule)
             RouterLinkModule.init(configuration.routerLink);
             NavigationModule.init(configuration.navigation);
             InstallAppModule.init(configuration.installApp);
+            AnimationModule.init(configuration.animation);
         }
     }
-})(ElementSetModule, RouterLinkModule, NavigationModule, InstallAppModule);
+})(
+    ElementSetModule,
+    RouterLinkModule,
+    NavigationModule,
+    InstallAppModule,
+    AnimationModule
+);

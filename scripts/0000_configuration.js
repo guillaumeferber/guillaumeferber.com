@@ -17,5 +17,9 @@ var configuration = {
     installApp: {
         buttonId: '#installBtn',
         bannerId: '#installBanner'
+    },
+    animation: {
+        elem: "[data-animation]",
+        activeClass: 'active'
     }
 };
