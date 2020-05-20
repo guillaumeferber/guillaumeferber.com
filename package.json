@@ -21,7 +21,7 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/minimalmedias/technogenie#readme",
   "devDependencies": {
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "del": "^5.1.0",
     "fs-extra": "^8.1.0",
     "gulp": "^4.0.2",
