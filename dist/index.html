@@ -87,16 +87,19 @@
 		</a>
 	</div>
 	<ul class="c-navigation c-navigation--column list-unstyled js-navigation-selector">
-		<li><a href="#about">About</a></li>
-		<li><a href="#cta">Work with me</a></li>
-		<li><a href="#technologies">Savoir-faire</a></li>
+		<li><a href="index.html#about">About</a></li>
+		<li><a href="work.html">Work with me</a></li>
+		<li><a href="index.html#technologies">Savoir-faire</a></li>
 		<li><a href="https://medium.com/@ferber.g" class="external">Blog</a></li>
-		<li><a href="#contact">Contact</a></li>
+		<li><a href="index.html#contact">Contact</a></li>
 		<li class="d-flex jusrtify-content-between align-items-center">
 			<div><a href="index-fr.html"><span>FR</span></a><span class="text-white mb-3 px-3">|</span><a href="/" class="active"><span>EN</span></a></div>
-			<div id="installBanner" class="banner">
-				<button id="installBtn"></button>
-			</div>
+<!-- start _install-button.html-->
+<label id="installBanner" for="installBtn" class="banner">
+    <input type="button" id="installBtn" />
+</label>
+
+<!-- end _install-button.html-->
 		</li>
 	</ul>
 
@@ -119,7 +122,7 @@
 		</hgroup>
 		<div class="c-hero__cta">
 			<div class="c-button text-uppercase">
-				<a class="c-button__body h2" href="#contact">Start a project</a>
+				<a class="c-button__body h6" href="#contact">Start a project</a>
 			</div>
 		</div>
 	</div>
@@ -143,7 +146,7 @@
             <section class="c-section c-section--primary c-section--intro" id="about">
 <!-- start _intro.html-->
 <div class="text-white">
-	<h4 class="paragraph">Hi. I'm Guillaume and I'm a Montreal-based web developer. I build responsive websites with a focus on good design, user-experience and SEO.</h4>
+	<h3 class="paragraph">Hi. I'm Guillaume and I'm a Montreal-based web developer. I build responsive websites with a focus on good design, user-experience and SEO.</h3>
 	<div class="row text-center">
 		<div class="col-lg-4 col-md-12">
 			<p><span class="c-icon c-icon--design"></span></p>
@@ -161,42 +164,115 @@
 			<p>Integration of your custom design into a content management system gives you the freedom to easily update and manage the site on your own.</p>
 		</div>
 	</div>
-	<h4 class="text-center mt-5"><a class="text-white text-underline" href="#cta">Want to know more ?</a></h4>
+	<h4 class="text-center mt-5"><a class="text-white text-underline" href="work.html">Want to know more ?</a></h4>
 </div>
 
 <!-- end _intro.html-->
             </section>
 
-            <section class="c-section c-section--primary">
-<!-- start _about.html-->
-<h2 id="cta">Want to work with me ?</h2>
-<div class="text-white">
+            <section class="c-section c-section--primary c-section--wide">
+<!-- start _offer.html-->
+<h2 class="u-m-bottom-6 u-m-left-2">Services</h2>
+<div class="c-card-container">
+    <!-- #1 -->
+    <div class="c-card">
+        <div class="c-card__side c-card__side--front c-card__side--front-1">
+            <div class="c-card__picture c-card__picture--1"></div>
+            <h4 class="c-card__heading">
+                <span class="c-card__heading-span">Standard</span>
+            </h4>
+            <div class="c-card__details">
+                <ul>
+                    <li>5 pages</li>
+                    <li>Premium Theme</li>
+                    <li>1 email/contact form</li>
+                    <li>100% SEO friendly</li>
+                    <li>350$/add. page</li>
+                    <li>3 revisions</li>
+                    <li>1 week ongoing support</li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-card__side c-card__side--back c-card__side--back-1">
+            <div class="c-card__cta">
+                <h5 class="c-card__price-only">Standard</h5>
+                <div class="c-card__price-box">
+                    <p class="c-card__price-value">$1 999<sup><small>+tx</small></sup></p>
+                </div>
+                <div class="c-button">
+                    <a href="mailto:info@guillaumeferber.com?subject=Soumission Standard" class="c-button__body">Request a quote!</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<h3 class="mt-5">Who I am</h3>
-<p itemscope itemtype="http://schema.org/Person">Hi, I'm <span itemprop="givenName">Guillaume</span><span class="u-hidden" aria-hidden="true" itemprop="familyName">FERBER</span>. I am a <span itemprop="jobTitle">freelance web developer</span> based in <span itemprop="workLocation">Montreal, QC</span>. Since 2018 I've worked with a wide range of companies, from local shops to national brands, and boutique design firms to global ad agencies. My focus is on <i>beautiful, clean digital experiences</i>.</p>
+    <!-- #2 -->
+    <div class="c-card c-card--highlighted">
+        <div class="c-card__side c-card__side--front c-card__side--front-2">
+            <div class="c-card__picture c-card__picture--2"></div>
+            <h4 class="c-card__heading">
+                <span class="c-card__heading-span c-card__heading-span--2">premium</span>
+            </h4>
+            <div class="c-card__details">
+                <ul>
+                    <li>10 pages + Premium Theme</li>
+                    <li>3 email/contact form</li>
+                    <li>100% SEO friendly</li>
+                    <li>Desktop + Mobile</li>
+                    <li>400$/add. page</li>
+                    <li>5 revisions</li>
+                    <li>2 week ongoing support</li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-card__side c-card__side--back c-card__side--back-2">
+            <div class="c-card__cta">
+                <h5 class="c-card__price-only">Premium</h5>
+                <div class="c-card__price-box">
+                    <p class="c-card__price-value">$5 999<sup><small>+tx</small></sup></p>
+                </div>
+                <div class="c-button">
+                    <a href="mailto:info@guillaumeferber.com?subject=Soumission Premium" class="c-button__body">Request a quote!</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<h3 class="mt-5">What I do</h3>
-<p>My background and training is in graphic design, so my first objective is to create a beautiful and user-friendly website. When it's time to build, I integrate the unique design into WordPress, Shopify, or custom build depending on your needs.</p>
+    <!-- #3 -->
+    <div class="c-card">
+        <div class="c-card__side c-card__side--front c-card__side--front-3">
+            <div class="c-card__picture c-card__picture--3"></div>
+            <h4 class="c-card__heading">
+                <span class="c-card__heading-span c-card__heading-span--3">Prestige</span>
+            </h4>
+            <div class="c-card__details">
+                <ul>
 
-<p>In general, I prefer to work on full, custom website designs and/or rebuilds. It's with these kind of projects I can really provide the most value and quality, so I don't tend to take on small incremental work or just fixing existing sites.</p>
+                    <li>20 pages + Premium Theme</li>
+                    <li>5 email/contact form</li>
+                    <li>100% SEO friendly</li>
+                    <li>Desktop + Mobile + Tablet</li>
+                    <li>500$/add. page</li>
+                    <li>illimited revisions</li>
+                    <li>4 week ongoing support</li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-card__side c-card__side--back c-card__side--back-3">
+            <div class="c-card__cta">
+                <h5 class="c-card__price-only">Prestige</h5>
+                <div class="c-card__price-box">
+                    <p class="c-card__price-value">8 999$<sup><small>+tx</small></sup></p>
+                </div>
+                <div class="c-button">
+                    <a href="mailto:info@guillaumeferber.com?subject=Soumission Prestige" class="c-button__body">Request a quote!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<p>Over the years, my network of partners has grown to include some incredible back-end developers, copywriters, photographers, and branding specialists so I can scale up or down any project based on needs.</p>
-
-<h3 class="mt-5">My Process</h3>
-<p>For a standard site, my process is three-fold.
-	<ol>
-		<li><b>The Discovery phase</b>. This is where we discuss the scope of the site, as well as your branding and what aesthetic you want to portray.</li>
-		<li><b>The Design phase</b>. Here I'll take all the information we've gathered and create some mockups for you. You'll send me feedback, and I'll send you revisions, and we'll keep doing that until the design is complete.</li>
-		<li><b>The Coding phase</b>. Here I'll code the site fully and then send you a live beta version. You can test it and make any final changes and then I'll push the site live.</li>
-	</ol>
-</p>
-
-<h3 class="mt-5">What I charge</h3>
-<p>I almost always work on a flat fee basis for each project, so I'll quote you a single project price, half will be due up front and the other half upon completion.</p>
-
-<p>Every project is different so I don't have a set range or price list, but if you <a href="#contact">contact me</a> with a description of your site I'll get back to you with a personalized quote.</p>
-
-<!-- end _about.html-->
+<!-- end _offer.html-->
             </section>
 
             <section class="c-section c-section--primary">
@@ -264,7 +340,7 @@
 <div class="text-white">
 	<p class="mb-2" itemscope itemtype="http://schema.org/Person">If you have a project in mind you think I'd be a good fit for, the best thing to do is to</p>
 	<div class="c-button c-button--small  d-block text-uppercase">
-		<a class="c-button__body h2" href="mailto:info@guillaumeferber.com">shoot me an email</a>
+		<a class="c-button__body h6" href="mailto:info@guillaumeferber.com">shoot me an email</a>
 	</div>
 	<p class="mt-4">and tell me a little bit about your project. Then we can take things from there.</p>
 	<h3 class="mt-5">Thanks</h3>

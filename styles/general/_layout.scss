@@ -1,11 +1,11 @@
 html { scroll-behavior: smooth; }
 $transition: all .15s ease-out 0s;
+
 body {
     width: 100%;
     background-color: var(--black);
-    font-family: 'open_sanslight', sans-serif;
-    font-size: 16px;
-    font-weight: 200;
+    font-family: $default-font-family;
+    font-size: 65%;
 }
 main {
     display: flex;
@@ -36,7 +36,7 @@ main {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 102.4rem) {
     main {
         body.open & {
             padding-left: 24vw;
@@ -50,12 +50,12 @@ main {
         }
     }
 }
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 102.4rem) and (orientation: landscape) {
     body.open main aside {
         width: 24vw;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 76.8rem) {
     body.open main {
         padding-left: 0;
     }

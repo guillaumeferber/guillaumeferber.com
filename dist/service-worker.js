@@ -3,6 +3,8 @@ var precacheResources = [
   '/',
   '/index.html',
   '/index-fr.html',
+  '/work.html',
+  '/work-fr.html',
   '/style.min.css',
   '/assets/images/main.webp',
   '/assets/images/main.jp2',
@@ -13,15 +15,11 @@ var precacheResources = [
   '/assets/images/logos/github.svg',
   '/assets/images/logos/next.svg',
   '/assets/images/logos/phone.svg',
-  '/assets/fonts/bebasneuebold-webfont.woff',
-  '/assets/fonts/bebasneuebold-webfont.woff2',
   '/assets/fonts/fa-brands-400.eot',
   '/assets/fonts/fa-brands-400.svg',
   '/assets/fonts/fa-brands-400.ttf',
   '/assets/fonts/fa-brands-400.woff',
-  '/assets/fonts/fa-brands-400.woff2',
-  '/assets/fonts/opensans-light-webfont.woff',
-  '/assets/fonts/opensans-light-webfont.woff2'
+  '/assets/fonts/fa-brands-400.woff2'
 ];
 
 self.addEventListener('install', function(event) {

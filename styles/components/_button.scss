@@ -34,6 +34,15 @@ $type: ease-out;
     & + & {
         margin-left: $marginRegular / 2;
     }
+    &--primary {
+        background-color: $color-primary-light;
+    }
+    &--secondary {
+        background-color: $color-secondary-light;
+    }
+    &--tertiary {
+        background-color: $color-tertiary-light;
+    }
 }
 
 .c-button__body {
@@ -64,5 +73,17 @@ $type: ease-out;
     &--small {
         min-width: auto;
         max-width: max-content;
+    }
+}
+
+.banner {
+    transform: translateY(2px) translateX(70px);
+    display: block;
+    height: 18px; width: 18px;
+    background-image: url(../../assets/images/logos/download.svg);
+    filter: invert(1);
+    cursor: pointer;
+    input[type=button] {
+        display: none;
     }
 }
