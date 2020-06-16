@@ -6,24 +6,20 @@ $card-width: calc((100% / 3) - 3%);
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    @media screen and (max-width: 50rem) {
-        flex-direction: column;
-    }
+    @media screen and (max-width: 50rem) { flex-direction: column; }
 }
 .c-card {
     // functionality
     position: relative;
     width: calc(#{$card-width} + 3%);
-    height: $card-height;
+    min-height: $card-height;
     transform: scale3d(1.06, 1.1, 1.06);
     @media screen and (max-width: 50rem) {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
         transform: scale(1);
-        & + & {
-            margin-top: 9rem;
-        }
+        & + & { margin-top: 9rem; }
     }
     &:not(&--highlighted) {
         outline: none;
@@ -41,9 +37,7 @@ $card-width: calc((100% / 3) - 3%);
         box-shadow: 0 .5rem 1.5rem rgba(lightgrey, .15);
         border-radius: 3px;
         overflow: hidden;
-        &--front {
-            background-color: var(--white);
-        }
+        &--front { background-color: var(--white); }
         &--back {
             &-1 { background: $linear-gradient-secondary; }
             &-2 { background: $linear-gradient-primary; }
@@ -66,31 +60,21 @@ $card-width: calc((100% / 3) - 3%);
 
     &__heading {
         font-size: 2.8rem;
-        font-weight: 300;
         color: var(--white);
+        @include default-font-settings(500);
         text-transform: uppercase;
         position: absolute;
         top: 2.5rem; left: 50%;
         transform: translateX(-50%);
         text-align: center;
-        &-span {
-            padding: 0 1.5rem;
-        }
-        &-subtitle {
-            font-size: 2.2rem;
-            sup {
-                font-size: .75rem;
-                top: -.9em;
-                right: -.5em;
-            }
-        }
+        &-span { padding: 0 1.5rem; }
+        &-subtitle { font-size: 2.2rem; }
     }
 
     .c-button {
         @extend .h6;
         .c-button__body {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            padding: 1rem;
         }
     }
 }
