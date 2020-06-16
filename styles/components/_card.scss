@@ -12,32 +12,32 @@ $card-width: calc((100% / 3) - 3%);
 }
 .c-card {
     // functionality
-     perspective: 150rem;
-    -moz-perspective: 150rem;
     position: relative;
+    width: calc(#{$card-width} + 3%);
     height: $card-height;
-    width: $card-width;
+    transform: scale3d(1.06, 1.1, 1.06);
     @media screen and (max-width: 50rem) {
         width: 90%;
-        margin-bottom: 4rem;
         margin-left: auto;
         margin-right: auto;
-
+        transform: scale(1);
+        & + & {
+            margin-top: 9rem;
+        }
     }
     &:not(&--highlighted) {
         outline: none;
-        // transform: scale(.94);
+        width: $card-width;
+        transform: scale(1);
         @media screen and (max-width: 50rem) {
             transform: scale(1);
+            width: 90%;
         }
     }
     &__side {
-        min-height: $card-height;
         width: 100%;
+        min-height: $card-height;
         transition: all .8s ease;
-        position: absolute;
-        top: 0; left: 0;
-        backface-visibility: hidden;
         box-shadow: 0 .5rem 1.5rem rgba(lightgrey, .15);
         border-radius: 3px;
         overflow: hidden;
@@ -45,23 +45,15 @@ $card-width: calc((100% / 3) - 3%);
             background-color: var(--white);
         }
         &--back {
-            backface-visibility: hidden;
-            transform: rotateY(180deg);
             &-1 { background: $linear-gradient-secondary; }
             &-2 { background: $linear-gradient-primary; }
             &-3 { background: $linear-gradient-tertiary; }
         }
     }
-    &:hover &__side--front {
-        transform: rotateY(-180deg);
-    }
-    &:hover &__side--back {
-        transform: rotateY(0);
-    }
 
     // front side styling
     &__picture {
-        height: 9rem;
+        height: 12rem;
         -webkit-clip-path: polygon(0 0 ,100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0 ,100% 0, 100% 85%, 0 100%);
         border-top-left-radius: 3px;
@@ -84,6 +76,22 @@ $card-width: calc((100% / 3) - 3%);
         &-span {
             padding: 0 1.5rem;
         }
+        &-subtitle {
+            font-size: 2.2rem;
+            sup {
+                font-size: .75rem;
+                top: -.9em;
+                right: -.5em;
+            }
+        }
+    }
+
+    .c-button {
+        @extend .h6;
+        .c-button__body {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
     }
 }
 .c-card__details {
@@ -101,41 +109,5 @@ $card-width: calc((100% / 3) - 3%);
                 border-bottom: 1px solid var(--light-gray);
             }
         }
-    }
-}
-
-.c-card__cta {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    text-align: center;
-    width: 80%;
-    min-height: $card-height;
-    margin: 0 auto;
-}
-
-.c-card__price-box {
-    color: var(--white);
-    & ~ .c-button .c-button__body {
-        @extend .h6;
-        font-size: 1.4rem;
-    }
-}
-
-.c-card__price-only {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-}
-
-.c-card__price-value {
-    font-size: 3.6rem;
-    margin-bottom: 0;
-    font-weight: 100;
-    position: relative;
-    sup {
-        position: absolute;
-        top: 1.4rem;
-        right: -.5rem;
-        font-size: 1.2rem;
     }
 }
