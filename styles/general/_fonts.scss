@@ -6,22 +6,6 @@
     font-weight: 200, 700;
 }
 
-@font-face {
-    font-family: 'Domine Bold';
-    src: url('./assets/fonts/domine-bold-webfont.woff2') format('woff2'),
-         url('./assets/fonts/domine-bold-webfont.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Pigeon';
-    src: url('./assets/fonts/pigeon-webfont.woff2') format('woff2'),
-         url('./assets/fonts/pigeon-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 @mixin default-font-settings($font-weight) {
     font-family: $default-font-family;
     font-variation-settings: "wght" $font-weight;
@@ -29,12 +13,6 @@
     text-rendering: optimizeSpeed;
 }
 
-@mixin serif-font-settings($font-weight) {
-    font-family: $serif-font-family;
-    font-variation-settings: "wght" $font-weight;
-    will-change: font-variation-settings;
-    text-rendering: optimizeSpeed;
-}
 *,
 *:before,
 *:after {
@@ -51,7 +29,7 @@ h3.highlight { font-size: 12.5rem; }
 h1, h2, h3, h4, h5, h6
 .h1, .h2, .h3, .h4, .h5, .h6 {
     display: block;
-    @include serif-font-settings(400);
+    @include default-font-settings(700);
     color: var(--white);
     &.paragraph {
         font-weight: 200;

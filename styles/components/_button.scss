@@ -5,7 +5,7 @@ $type: ease-out;
     max-width: 400px;
     min-width: 100%;
     margin: 0 auto;
-    background-color: var(--white);
+    background: linear-gradient(90deg, $color-secondary-light, $color-secondary-dark);
     position: relative;
     z-index: 3;
     border: 0 none;
@@ -16,40 +16,30 @@ $type: ease-out;
         content: '';
         position: absolute;
         top: 0; left: 0;
-        background-color: var(--blue);
+        background: linear-gradient(90deg, $color-primary-dark, $color-primary-light);
+
         height: 100%;
         width: 0;
         transition: width $duration $type;
         z-index: 1;
     }
     &:hover {
-        &:after {
-            width: 100%;
-        }
-        .c-button__body {
-            color: var(--white) !important;
-        }
+        &:after { width: 100%; }
     }
 
     & + & {
         margin-left: $marginRegular / 2;
     }
-    &--primary {
-        background-color: $color-primary-light;
-    }
-    &--secondary {
-        background-color: $color-secondary-light;
-    }
-    &--tertiary {
-        background-color: $color-tertiary-light;
-    }
+    &--primary { background: $color-primary-light linear-gradient(90deg, $color-primary-light, $color-primary-dark); }
+    &--secondary { background: $color-secondary-light linear-gradient(90deg, $color-secondary-light, $color-secondary-dark); }
+    &--tertiary { background: $color-tertiary-light linear-gradient(90deg, $color-tertiary-light, $color-tertiary-dark); }
 }
 
 .c-button__body {
     display: block;
     position: relative;
     z-index: 2;
-    color: var(--primary) !important;
+    color: var(--white);
     text-align: center;
     transition: color $animation-duration $type $animation-delay;
     padding: 1.6rem 2rem;
@@ -57,6 +47,7 @@ $type: ease-out;
     &:hover {
         cursor: pointer;
         text-decoration: none;
+        color: inherit;
     }
 }
 
